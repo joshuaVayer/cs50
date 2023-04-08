@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Joshua Vayer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <!-- Personal CSS sheet -->
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+
+<body onload="rewrite()">
+    <main>
+        <div class="header">
+            <div class="header">
+                <a class="navbar-brand" href="index.html"><img src="public/img/Logo.png" alt="Logo"></a>
+                <nav class="navbar navbar-expand-md navbar justify-content-center navbar-light fixed-top shadow-sm">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" data-toggle="modal"
+                                style="background-color: transparent; border: none;"
+                                data-target="#exampleModal">Contact</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <p><i class="bi bi-envelope"></i></p>
+                            <p><a href="mailto:hello@joshuavayer.com">hello@joshuavayer.com</a></p>
+                            <img class="p-4" src="./public/img/separator.png" alt="separator" />
+                            <p><i class="bi bi-telephone"></i></p>
+                            <p>07.66.31.08.10</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="about__firstSection">
+                <div class="about__firstSection-right">
+                    <div class="about__title">
+                        <img src="public/img/linea52.png" alt="LineTitle">
+                        <h1>About me</h1>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac sollicitudin dolor, et feugiat
+                        felis. Ut aliquam pellentesque metus ac tristique. Fusce et diam et ipsum scelerisque pulvinar
+                        eu at ligula. Mauris quis est enim. Quisque consectetur laoreet ligula, fringilla suscipit nisl
+                        egestas condimentum. Nullam porttitor, libero quis venenatis facilisis, enim massa facilisis mi,
+                        a commodo urna metus sed eros. Fusce odio turpis, luctus eu risus quis, tempor pellentesque
+                        ante.
+                    </p>
+                    <p> Pellentesque nec enim tellus. Phasellus non elit gravida, luctus nibh porttitor, congue erat.
+                        Cras ac vestibulum mauris. In vitae massa ut lacus auctor tristique vitae nec erat. Phasellus
+                        laoreet viverra arcu id egestas. Suspendisse ullamcorper ante at ipsum porttitor congue. Proin
+                        aliquam accumsan vulputate. Ut et placerat velit, vel faucibus leo. Donec sit amet facilisis
+                        dui.
+                    </p>
+                    <a class="btn btn-secondary rounded-pill" href="#">Download my resume</a>
+                </div>
+                <div class="about__firstSection-left">
+                    <img class="img-fluid" src="public/img/joshuafull.jpg" alt="Joshua">
+                </div>
+            </div>
+            <div class="about__secondSection">
+                <div class="about__title">
+                    <img src="public/img/linea52.png" alt="LineTitle">
+                    <h1>Skills</h1>
+                </div>
+                <div class="skills">
+                    <div class="card mr-2">
+                        <div class="card-body">
+                            <h4 class="card-title">Back-end</h4>
+                            <img src="public/img/linea5.png" alt="Line">
+                            <ul class="dashed">
+                                <li>Element one<br>
+                                    <em>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum assumenda delectus
+                                        quia perspiciatis, distinctio similique excepturi est accusantium neque deserunt?
+                                    </em>
+                                </li>
+                                <li>Element two</li>
+                                <li>Element three</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card mr-2 ml-2">
+                        <div class="card-body">
+                            <h4 class="card-title">Front-end</h4>
+                            <img src="public/img/linea5.png" alt="Line">
+                            <ul class="dashed">
+                                <li>Element one<br>
+                                    <em>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum assumenda delectus
+                                        quia perspiciatis, distinctio similique excepturi est accusantium neque deserunt?
+                                    </em>
+                                </li>
+                                <li>Element two</li>
+                                <li>Element three</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card ml-2">
+                        <div class="card-body">
+                            <h4 class="card-title">Web design</h4>
+                            <img src="public/img/linea5.png" alt="Line">
+                            <ul>
+                                <li>Element one<br>
+                                    <em>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum assumenda delectus
+                                        quia perspiciatis, distinctio similique excepturi est accusantium neque deserunt?
+                                    </em>
+                                </li>
+                                <li>Element two</li>
+                                <li>Element three</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <!-- Personal JavaScript -->
+    <script src="public/functions/script.js"></script>
+
+</body>
+
+</html>

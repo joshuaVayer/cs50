@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <!-- First question block -->
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <div class="question_one">
+                    <h3>Who is considered to be the first programmer ?</h3>
+                </div>
+                <div class="options options_q1">
+                    <button type="button" class="opt_btn">Mike Delphino</button>
+                    <button type="button" class="opt_btn">Charlie Chaplin</button>
+                    <button type="button" class="opt_btn">Ada Lovelace</button>
+                    <button type="button" class="opt_btn">Alan Turing</button>
+                </div>
+            </div>
+
+            <!-- Second question block -->
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <div class="question_two">
+                    <h3>From which continent New-Zealand is part of ?</h3>
+                </div>
+                <form>
+                    <input id="inpt_two" type="text" placeholder="Your answer">
+                    <input id="btn_two" type="button" value="Submit">
+                </form>
+            </div>
+
+        </div>
+        <script>
+
+            // 1 - VARIBALES AND SELECTORS
+            const answer_one = 'Ada Lovelace';
+            const answer_two = 'Zealandia';
+
+            const opt = document.querySelectorAll('.opt_btn');
+            const btn_two = document.getElementById('btn_two');
+            const inpt = document.getElementById('inpt_two');
+
+
+
+            // 2 - EVENTS LISTENERS
+
+            // First question. Loop on each button and check the answer on click, then disable it.
+            opt.forEach( o => {
+                o.addEventListener('click', () => {
+                    let result = "";
+                    // Check the answer
+                    if(checkAnswer(answer_one, o.innerText)){
+                        o.style.backgroundColor = 'lightgreen';
+                        result = "Correct!";
+                    }
+                    else {
+                        o.style.backgroundColor = 'tomato';
+                        result = "Incorrect";
+                    }
+
+                    disable_buttons(opt);
+
+                    // Append the output
+                    let output = document.createElement("P");
+                    output.innerHTML = result;
+                    document.querySelector('.question_one').appendChild(output);
+                });
+            });
+
+            // Second questions. Check the value of the input
+
+            btn_two.addEventListener('click', () => {
+                let result = "";
+                // Check the answer
+                if (checkAnswer(answer_two, inpt.value)){
+                    inpt.style.backgroundColor = 'lightgreen';
+                    result = "Correct!";
+                } else {
+                    inpt.style.backgroundColor = 'tomato';
+                    result = "Incorrect";
+                }
+                // Disable the button once submited
+                btn_two.disabled = true;
+                // Print the output
+                let output = document.createElement("P");
+                output.innerHTML = result;
+                document.querySelector('.question_two').appendChild(output);
+            });
+
+
+            // 3 - FUNCTIONS
+            function checkAnswer(answer, submit){
+                if (answer === submit){
+                    return true;
+                }
+                return false;
+            }
+
+            function disable_buttons(node){
+                node.forEach(btn => {
+                    btn.disabled = true;
+                });
+            }
+
+        </script>
+    </body>
+</html>
